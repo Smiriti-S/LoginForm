@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Poppins",sans-serif;
+}
+body{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('trees.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#float{
+    position: absolute;
+    justify-content: center;
+    z-index: -1;
+    padding-bottom: 50px;
+}
+#float {
+    bottom: 15%;
+    position: absolute;
+    animation: linear infinite;
+    animation-name: run;
+    animation-duration: 10s;
+  }
+  @keyframes run {
+    0% {
+      right: 0;
+    }
+    48% {
+      -webkit-transform: rotateY(0deg); 
+    }
+    50% { 
+      right: calc(100% - 100px);
+      -webkit-transform: rotateY(180deg); 
+    }
+    98% {
+      -webkit-transform: rotateY(180deg); 
+    }
+    100% {
+      right: 0;    
+       -webkit-transform: rotateY(0deg);
+    }
+  }
+.heading{
+    z-index: 1;
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    color: white;
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+.heading h1{
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+    text-align: center;
+}
+.heading .info-box{
+    width:100%;
+    height: 50px;
+    position: relative;
+    margin:30px 0;
+}
+.info-box input{
+    width: 100%;
+    height: 100%;
+    background: rgb(224, 184, 184);
+    border: none;
+    outline: none;
+    border: 2px white;
+    border-radius: 40px;
+    font-size: 15px;
+    color:white;
+    padding: 20px 45px 20px 20px;
+}
+.info-box input::placeholder{
+    color: white;
+}
+.info-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+}
+.heading .signup-forget{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    padding-bottom: 15px;
+}
+.signup-forget a{
+    color: white;
+    text-decoration: none;
+}
+.signup-forget a:hover{
+    text-decoration: underline;
+}
+.heading .btn{
+    width: 100%;
+    height: 45px;
+    background: white;
+    border:none;
+    outline:none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px black;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 20px;
+}
+@keyframes toptobottom{
+    from {
+      top: 0%;
+      transform: translateY(-100%);
+    }
+    to {
+      bottom: 100%;
+      transform: translateY(100%);
+    }
+  }
+#leaves .leaf1{
+  position: relative;
+  z-index: -1;
+  padding-right: 30px;
+  animation-name: toptobottom;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+#leaves .leaf2{
+  position: relative;
+  z-index: -1;
+  padding-left: 30px;
+  padding-right: 30px;
+  animation-name: toptobottom;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+#leave .leaf3{
+  position: relative;
+  z-index: -1;
+  padding-left: 30px;
+  padding-right: 30px;
+  animation-name: toptobottom;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+#leave .leaf4{
+  position: relative;
+  z-index: -1;
+  padding-left: 30px;
+  animation-name: toptobottom;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
